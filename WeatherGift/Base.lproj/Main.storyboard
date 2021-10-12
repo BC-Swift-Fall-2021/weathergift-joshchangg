@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wr6-u2-1r2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o8z-JD-BXT">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,10 +8,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="tiV-m3-SFO">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="o8z-JD-BXT" customClass="PageViewController" customModule="WeatherGift" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIa-u3-AuS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-732" y="-693"/>
+        </scene>
         <!--Location Detail View Controller-->
         <scene sceneID="4SS-gt-kVt">
             <objects>
-                <viewController id="Wr6-u2-1r2" customClass="LocationDetailViewController" customModule="WeatherGift" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationDetailViewController" id="Wr6-u2-1r2" customClass="LocationDetailViewController" customModule="WeatherGift" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dSg-eb-qtD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,6 +31,18 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem title="About" id="6nj-rQ-6dl"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LCM-vX-Vtz"/>
+                                    <barButtonItem style="plain" id="nD1-fU-K9j">
+                                        <pageControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="tgN-Sf-nug">
+                                            <rect key="frame" x="73" y="8" width="230" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="pageIndicatorTintColor" systemColor="systemTealColor"/>
+                                            <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="pageControlTapped:" destination="Wr6-u2-1r2" eventType="valueChanged" id="Sft-Hu-13B"/>
+                                            </connections>
+                                        </pageControl>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gzJ-sb-EAX"/>
                                     <barButtonItem image="list.bullet" catalog="system" id="gDM-Sy-O4h">
                                         <connections>
@@ -88,6 +108,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="pyB-2G-cr3" id="HcL-87-62w"/>
                         <outlet property="imageView" destination="R9s-Mc-yy3" id="Szs-b6-wB8"/>
+                        <outlet property="pageControl" destination="tgN-Sf-nug" id="og3-TY-Nt1"/>
                         <outlet property="placeLabel" destination="Um7-pt-Oii" id="Ld3-SD-A5E"/>
                         <outlet property="summaryLabel" destination="n3B-N0-OK9" id="EaP-Dm-cbC"/>
                         <outlet property="temperatureLabel" destination="qnb-rx-Hmm" id="kcy-6r-cIc"/>
@@ -106,7 +127,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJH-QH-8S6">
-                                <rect key="frame" x="0.0" y="643" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="fF3-h4-fkM"/>
                                 </constraints>
