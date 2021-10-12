@@ -15,6 +15,7 @@
 		4376E110271545A60010861B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4376E10E271545A60010861B /* LaunchScreen.storyboard */; };
 		4376E118271545CF0010861B /* WeatherLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376E117271545CF0010861B /* WeatherLocation.swift */; };
 		4376E11A2715E1340010861B /* APIkeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376E1192715E1340010861B /* APIkeys.swift */; };
+		4376E11C2715E5410010861B /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376E11B2715E5410010861B /* LocationDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4376E111271545A60010861B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4376E117271545CF0010861B /* WeatherLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocation.swift; sourceTree = "<group>"; };
 		4376E1192715E1340010861B /* APIkeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIkeys.swift; sourceTree = "<group>"; };
+		4376E11B2715E5410010861B /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4376E103271545A30010861B /* AppDelegate.swift */,
 				4376E105271545A30010861B /* SceneDelegate.swift */,
 				4376E117271545CF0010861B /* WeatherLocation.swift */,
+				4376E11B2715E5410010861B /* LocationDetailViewController.swift */,
 				4376E107271545A30010861B /* LocationListViewController.swift */,
 				4376E109271545A30010861B /* Main.storyboard */,
 				4376E10C271545A60010861B /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				4376E118271545CF0010861B /* WeatherLocation.swift in Sources */,
 				4376E11A2715E1340010861B /* APIkeys.swift in Sources */,
 				4376E104271545A30010861B /* AppDelegate.swift in Sources */,
+				4376E11C2715E5410010861B /* LocationDetailViewController.swift in Sources */,
 				4376E106271545A30010861B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
