@@ -27,27 +27,28 @@ class WeatherLocation: Codable {
         guard let url = URL(string: urlString) else {
             print("ERROR: Could not create a URL from \(urlString)")
             return
-        }
-    }
-    
-    // Create Session
-    let session = URLSession.shared
-    
-    // get data with .dataTask Method
-    let task = session.dataTask(with: url) { (data, response, error) in
-        if let error = error {
-        print("ERROR: \(error.localizedDescription)")
-        }
-        do {
-            let json = JSONSerialization.jsonObject(with: data!, options: [])
-            print("\(json)")
-        } catch {
-            print("JSON ERROR: \(error.localizedDescription)")
             
+        // Create Session
+        let session = URLSession.shared
+            
+        // get data with .dataTask Method
+        let task = session.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+            print("ERROR: \(error.localizedDescription)")
+            }
+            do {
+                let json = JSONSerialization.jsonObject(with: data!, options: [])
+                print("\(json)")
+            } catch {
+                print("JSON ERROR: \(error.localizedDescription)")
+                    
+            }
         }
-    }
-    task.resume()
+        task.resume()
     }
 }
+    
+   
+
 
 
