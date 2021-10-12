@@ -9,5 +9,6 @@ import Foundation
 
 struct APIkeys {
     static let googlePlacesKey = " "
+    static let openWeatherKey = " "
     
 }
